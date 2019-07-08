@@ -1,5 +1,3 @@
-import org.junit.Test;
-
 /**
  * @projectName: thread-demo
  * @packageName: PACKAGE_NAME
@@ -9,12 +7,10 @@ import org.junit.Test;
  */
 public class DemoTest {
 
-    @Test
-    public void testThread(){
-
-        //
-        new Thread().start();
-
+    public static void main(String[] args) {
+        ThreadGroup threadGroup = Thread.currentThread().getThreadGroup();
+        String groupName = threadGroup.getName();
+        System.out.println(groupName);
     }
 
 }
