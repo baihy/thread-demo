@@ -8,9 +8,11 @@
 public class DemoTest {
 
     public static void main(String[] args) {
-        ThreadGroup threadGroup = Thread.currentThread().getThreadGroup();
-        String groupName = threadGroup.getName();
-        System.out.println(groupName);
+        // 这行代码就会在开辟20m的内存空间
+        byte[] b = new byte[10 * 1024 * 1024];
+
+        System.out.println((0x00000000ffb80000-0x00000000ff980000)/1024);
+
     }
 
 }
