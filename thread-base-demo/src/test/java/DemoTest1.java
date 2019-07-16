@@ -13,7 +13,9 @@ public class DemoTest1 {
         // -Xmx20m -Xms20m -Xmn10m  -XX:SurvivorRatio=2 -XX:+PrintGCDetails -XX:+PrintCommandLineFlags
         // 第二次配置：不直接指定新生代的大小，而是指定新生代和老年代的比例
         // -Xmx20m -Xms20m -XX:NewRatio=2 -XX:+PrintGCDetails -XX:+PrintCommandLineFlags
-        byte[] b = new byte[1 * 1024 * 1024];
+        // 当内存溢出时，导出异常信息
+        // -Xmx10m -Xms10m -XX:+PrintGCDetails -XX:+HeapDumpOnOutOfMemoryError -XX:HeapDumpPath=D:/aaa.dump -XX:+PrintCommandLineFlags
+        byte[] b = new byte[10 * 1024 * 1024];
 
     }
 
