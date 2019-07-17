@@ -19,6 +19,9 @@ public class DemoTest1 {
         for (int i = 0; i < 5; i++) {
             byte[] b = new byte[1 * 1024 * 1024];
         }
+
+
     }
+
 
 }
