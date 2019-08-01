@@ -24,7 +24,7 @@ public class MainTest {
         Iterator<String> it = list.iterator();
         while (it.hasNext()) {
             String str = it.next();
-            if ("bbb".equals(str)) {
+            if ("aaa".equals(str)) {
                 it.remove(); // 注意这里Iterator的remove，而不是list的remove方法
             }
         }
